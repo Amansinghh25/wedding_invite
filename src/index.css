@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@theme {
+  --font-cinzel: 'Cinzel', serif;
+  --font-cinzel-dec: 'Cinzel Decorative', cursive;
+  --font-script: 'Alex Brush', 'Great Vibes', cursive;
+  --font-serif-classic: 'Cormorant Garamond', Georgia, serif;
+  --font-hindi: 'Tiro Devanagari Hindi', serif;
+
+  --color-gold-50: #fdfbf7;
+  --color-gold-100: #faf4e6;
+  --color-gold-200: #f4e4c1;
+  --color-gold-300: #eacb8c;
+  --color-gold-400: #dfb256;
+  --color-gold-500: #c9932b;
+  --color-gold-600: #a7731f;
+  --color-gold-700: #81541b;
+  --color-gold-800: #623f1a;
+  --color-gold-900: #422912;
+
+  --color-ivory: #FAF6EE;
+  --color-rich-maroon: #5E0921;
+  --color-royal-maroon: #72092C;
+  --color-deep-wine: #480616;
+}
+
+@layer base {
+  *, ::after, ::before {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-family: var(--font-serif-classic), Georgia, serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #070102;
+    color: #FAF6EE;
+    overflow-x: hidden;
+  }
+
+  #root {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Indian Royal Background Texture */
+.bg-jali-pattern {
+  background-image: radial-gradient(circle at center center, rgba(212, 175, 55, 0.08) 0, rgba(212, 175, 55, 0.08) 2.5px, transparent 2.5px, transparent 100%),
+                    radial-gradient(circle at 100% 100%, rgba(212, 175, 55, 0.08) 0, rgba(212, 175, 55, 0.08) 2.5px, transparent 2.5px, transparent 100%);
+  background-size: 24px 24px;
+}
+
+/* Luxury Gold Typography Gradient */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #D4AF37 0%, #FFF3B0 30%, #AA771C 60%, #E8C15A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Cinematic Slow Zoom & Glow Keyframes */
+@keyframes slowZoom {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.35)); }
+  50% { filter: drop-shadow(0 0 35px rgba(255, 215, 0, 0.75)); }
+}
+
+.animate-slow-zoom {
+  animation: slowZoom 24s ease-in-out infinite alternate;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #100205;
+}
+::-webkit-scrollbar-thumb {
+  background: #8C631F;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
