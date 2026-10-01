@@ -101,14 +101,16 @@ export const WeddingTimeline: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Editorial Layout: Alternating Photography & Content */}
+                  {/* Editorial Layout: Royal Event Card Container */}
                   <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: '-60px' }}
                     transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-                    className={`grid grid-cols-1 sm:grid-cols-12 gap-8 sm:gap-12 items-center ${
-                      evt.isMainWedding ? 'p-4 sm:p-8 rounded-3xl bg-gradient-to-b from-[#2A0610]/80 via-[#1C030A]/60 to-[#100105]/80 border border-amber-400/40 shadow-[0_20px_60px_rgba(94,9,33,0.4)]' : ''
+                    className={`grid grid-cols-1 sm:grid-cols-12 gap-6 sm:gap-10 items-center p-4 sm:p-8 rounded-3xl bg-gradient-to-b from-[#2A0610]/80 via-[#1C030A]/60 to-[#100105]/80 border shadow-[0_20px_60px_rgba(94,9,33,0.4)] backdrop-blur-xs ${
+                      evt.isMainWedding
+                        ? 'border-amber-400/60 ring-1 ring-amber-400/30'
+                        : 'border-amber-400/40'
                     }`}
                   >
                     {/* Event Editorial Photography */}
