@@ -163,7 +163,7 @@ export const InvitationExperience: React.FC = () => {
                 }`}
                 title={page.title}
               >
-                <img src={page.imageSrc} alt="" className="w-full h-full object-cover object-top" />
+                <img src={page.imageSrc} alt="" loading="lazy" decoding="async" className="w-full h-full object-cover object-top" />
               </button>
             ))}
           </div>

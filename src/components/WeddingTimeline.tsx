@@ -123,6 +123,8 @@ export const WeddingTimeline: React.FC = () => {
                         <img
                           src={evt.image}
                           alt={evt.title}
+                          loading="lazy"
+                          decoding="async"
                           className="w-full h-full object-cover object-top filter brightness-95 contrast-105 transition-transform duration-1000 group-hover:scale-105"
                         />
                         {/* Soft Vignette Mask */}
