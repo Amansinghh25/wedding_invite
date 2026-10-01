@@ -157,10 +157,9 @@ export const EntryGate: React.FC<EntryGateProps> = ({ onEnter, onMusicStart }) =
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="my-1 sm:my-2"
+              className="my-1 sm:my-2 flex justify-center"
             >
-              <Monogram size="md" className="sm:hidden" />
-              <Monogram size="lg" className="hidden sm:inline-flex" />
+              <Monogram size="lg" />
             </motion.div>
 
             {/* Bride Family Invitation Line */}

@@ -15,8 +15,7 @@ export const Footer: React.FC = () => {
       <div className="relative max-w-3xl mx-auto z-10 space-y-6">
         {/* Monogram Seal */}
         <div className="flex justify-center">
-          <Monogram size="md" className="sm:hidden" />
-          <Monogram size="lg" className="hidden sm:inline-flex" />
+          <Monogram size="lg" />
         </div>
 
         {/* Couple Names & Family */}
